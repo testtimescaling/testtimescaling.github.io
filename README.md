@@ -9,9 +9,8 @@
 
 # Awesome-Test-time-Scaling-in-LLMs
 
-<div align="center">
-  <img src="/citation-badge.svg" alt="Citations Badge" />
-</div>
+![Arxiv Citations](https://img.shields.io/endpoint?url=https://<your-username>.github.io/<repo-name>/arxiv_citations.json&style=for-the-badge)
+
 _Create a site or blog from your GitHub repositories with GitHub Pages._
 
 </header>
