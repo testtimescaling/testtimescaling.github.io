@@ -29,13 +29,11 @@ jobs:
           git remote -v
           echo "Token: ${PERSONAL_ACCESS_TOKEN:0:4}********"  # Check if injected
 
-      - name: Commit and Push
-        env:
-          PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+     - name: Commit and Push
         run: |
-          git config --global user.name "testtimescaling"
-          git config --global user.email "testtimescaling@gmail.com"
-          git remote set-url origin https://x-access-token:${PERSONAL_ACCESS_TOKEN}@github.com/testtimescaling/testtimescaling.github.io.git
+          git config user.name "testtimescaling"
+          git config user.email "testtimescaling@gmail.com"
+          git remote set-url origin https://x-access-token:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/${{ github.repository }}.git
           git add citation-badge.svg
           git commit -m "Update citation badge" || echo "No changes"
           git push origin main
