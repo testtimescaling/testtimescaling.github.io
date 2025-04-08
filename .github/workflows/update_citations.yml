@@ -26,7 +26,7 @@ jobs:
       
       - name: Update citation counts
         run: |
-          python scripts/update_arxiv_citations.py
+          python .github/scripts/update_arxiv_citations.py
       
       - name: Commit and push
         run: |
