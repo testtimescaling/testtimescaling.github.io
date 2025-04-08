@@ -30,7 +30,7 @@ def generate_svg(count):
 """
 
 def main():
-    with open("papers.json", "r") as f:
+    with open(".github/scripts/papers.json", "r") as f:
         papers = json.load(f)
     
     total = 0
