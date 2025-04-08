@@ -23,10 +23,16 @@ jobs:
       - name: Generate citation badge
         run: python .github/scripts/update_citations.py
 
-      - name: Commit and push changes
+      - name: Commit and Push
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           git config user.name github-actions[bot]
           git config user.email github-actions[bot]@users.noreply.github.com
+          git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}
           git add citation-badge.svg
           git commit -m "Update citation badge"
-          git push
+          git push origin main
+
+
+
