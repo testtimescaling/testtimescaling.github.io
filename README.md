@@ -7,8 +7,10 @@
   Add your open source license, GitHub uses MIT license.
 -->
 
-# GitHub Pages
-
+# Awesome-Test-time-Scaling-in-LLMs
+<div align="center">
+  <img src="citation-badge.svg" alt="Citation Count" style="height:30px;">
+</div>
 _Create a site or blog from your GitHub repositories with GitHub Pages._
 
 </header>
