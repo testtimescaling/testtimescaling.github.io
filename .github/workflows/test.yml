@@ -1,0 +1,5 @@
+- name: Debug Git Remote
+  run: |
+    echo "Git Remote BEFORE:"
+    git remote -v
+    echo "Token: ${PERSONAL_ACCESS_TOKEN:0:4}********"  # Check if injected
