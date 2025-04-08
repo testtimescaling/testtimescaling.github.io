@@ -1,0 +1,42 @@
+name: Update Arxiv Citations
+
+on:
+  # 定时执行：每天 0 点 (UTC) 运行一次
+  schedule:
+    - cron: "0 0 * * *"
+  # 手动触发
+  workflow_dispatch:
+  
+jobs:
+  update-citations:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1) 检出代码
+      - uses: actions/checkout@v3
+
+      # 2) 设置 Python 环境
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.x"
+
+      # 3) 安装依赖（如 requests）
+      - name: Install dependencies
+        run: |
+          pip install requests
+
+      # 4) 运行脚本，生成 arxiv_citations.json
+      - name: Update citation counts
+        run: |
+          python scripts/update_arxiv_citations.py
+      
+      # 5) 如果有变化则提交并推送
+      - name: Commit changes
+        run: |
+          git config --global user.email "[email protected]"
+          git config --global user.name "github-actions[bot]"
+          git add arxiv_citations.json
+          # 若没有变化，会报错，故用 || echo "No changes to commit"
+          git commit -m "Update arxiv citation counts [skip ci]" || echo "No changes to commit"
+          git push
