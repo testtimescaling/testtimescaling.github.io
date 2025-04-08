@@ -25,13 +25,11 @@ jobs:
 
       - name: Commit and Push
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          PERSONAL_ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-      
-          git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}
-      
+          git config --global user.name "testtimescaling"
+          git config --global user.email "testtimescaling@gmail.com"
+          git remote set-url origin https://x-access-token:${PERSONAL_ACCESS_TOKEN}@github.com/${{ github.repository }}
           git add citation-badge.svg
           git commit -m "Update citation badge" || echo "No changes"
           git push origin main
