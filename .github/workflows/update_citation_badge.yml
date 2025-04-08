@@ -35,7 +35,7 @@ jobs:
         run: |
           git config --global user.name "testtimescaling"
           git config --global user.email "testtimescaling@gmail.com"
-          git remote set-url origin https://x-access-token:${PERSONAL_ACCESS_TOKEN}@github.com/${{ github.repository }}
+          git remote set-url origin https://x-access-token:${PERSONAL_ACCESS_TOKEN}@github.com/testtimescaling/testtimescaling.github.io.git
           git add citation-badge.svg
           git commit -m "Update citation badge" || echo "No changes"
           git push origin main
