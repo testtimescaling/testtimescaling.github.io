@@ -29,7 +29,7 @@ jobs:
           git remote -v
           echo "Token: ${PERSONAL_ACCESS_TOKEN:0:4}********"  # Check if injected
 
-     - name: Commit and Push
+      - name: Commit and Push
         run: |
           git config user.name "testtimescaling"
           git config user.email "testtimescaling@gmail.com"
