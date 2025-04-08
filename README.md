@@ -8,6 +8,7 @@
 -->
 
 # Awesome-Test-time-Scaling-in-LLMs
+
 <div align="center">
   <img src="citation-badge.svg" alt="Citation Count" style="height:30px;">
 </div>
