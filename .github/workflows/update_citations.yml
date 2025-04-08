@@ -29,7 +29,7 @@ jobs:
       # 4) 运行脚本，生成 arxiv_citations.json
       - name: Update citation counts
         run: |
-          python scripts/update_arxiv_citations.py
+          python .github/scripts/update_arxiv_citations.py
       
       # 5) 如果有变化则提交并推送
       - name: Commit changes
