@@ -57,7 +57,7 @@ def main():
 
     svg = generate_svg(total_citations)
     with open("citation-badge.svg", "w") as f:
-        f.write(svg)
+        f.write(svg_content)
 
     print(f"✅ Total citations: {total_citations}")
 
