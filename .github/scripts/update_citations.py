@@ -30,18 +30,15 @@ def generate_svg(count):
 """
 
 def main():
-    with open(".github/scripts/papers.json", "r") as f:
-        papers = json.load(f)
     
     total = 0
-    for paper in papers:
-        arxiv_id = paper["arxiv_id"]
-        doi = arxiv_to_doi(arxiv_id)
-        if doi:
-            count = get_citations(doi)
-            print(f"{arxiv_id} => {count} citations")
-            total += count
-        time.sleep(1)
+    arxiv_id = "2503.24235"
+    doi = arxiv_to_doi(arxiv_id)
+    if doi:
+        count = get_citations(doi)
+        print(f"{arxiv_id} => {count} citations")
+        total += count
+    time.sleep(1)
 
     with open("citation-badge.svg", "w") as f:
         f.write(generate_svg(total))
