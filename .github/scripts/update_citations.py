@@ -1,9 +1,25 @@
 import json
 import requests
+import time
 
-def fetch_citation_count(arxiv_id):
-    url = f"https://api.semanticscholar.org/graph/v1/paper/arXiv:{arxiv_id}?fields=citationCount"
-    r = requests.get(url)
+headers = {
+    "User-Agent": "Citation-Badge-Updater"
+}
+
+def arxiv_to_doi(arxiv_id):
+    url = f"https://api.semanticscholar.org/graph/v1/paper/arXiv:{arxiv_id}?fields=externalIds"
+    r = requests.get(url, headers=headers)
+    if r.status_code == 200:
+        data = r.json()
+        doi = data.get("externalIds", {}).get("DOI")
+        return doi
+    return None
+
+def get_citation_count(doi):
+    if not doi:
+        return 0
+    url = f"https://api.semanticscholar.org/graph/v1/paper/DOI:{doi}?fields=citationCount"
+    r = requests.get(url, headers=headers)
     if r.status_code == 200:
         return r.json().get("citationCount", 0)
     return 0
@@ -22,11 +38,26 @@ def main():
     with open("papers.json", "r") as f:
         papers = json.load(f)
 
-    total_citations = sum(fetch_citation_count(p['arxiv_id']) for p in papers)
+    total_citations = 0
+    for p in papers:
+        arxiv_id = p["arxiv_id"]
+        print(f"📘 Fetching DOI for arXiv:{arxiv_id}")
+        doi = arxiv_to_doi(arxiv_id)
+        if doi:
+            print(f"🔗 Found DOI: {doi}")
+        else:
+            print("❌ DOI not found, skipping.")
+            continue
 
-    svg_content = generate_svg(total_citations)
+        count = get_citation_count(doi)
+        print(f"📊 Citations: {count}")
+        total_citations += count
+
+        time.sleep(1)  # Respect rate limit
+
+    svg = generate_svg(total_citations)
     with open("citation-badge.svg", "w") as f:
-        f.write(svg_content)
+        f.write(svg)
 
     print(f"✅ Total citations: {total_citations}")
 
