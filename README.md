@@ -9,7 +9,7 @@
 
 # Awesome-Test-time-Scaling-in-LLMs
 
-![Arxiv Citations](https://img.shields.io/endpoint?url=https://github.com/testtimescaling/testtimescaling.github.io/arxiv_citations.json&style=for-the-badge)
+![Arxiv Citations](https://img.shields.io/endpoint?url=https://github.com/testtimescaling/testtimescaling.github.io/blob/main/arxiv_citations.json&style=for-the-badge)
 
 _Create a site or blog from your GitHub repositories with GitHub Pages._
 
