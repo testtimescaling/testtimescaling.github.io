@@ -1,19 +1,20 @@
 name: Update Arxiv Citations
 
 on:
-  # 定时执行：每天 0 点 (UTC) 运行一次
   schedule:
     - cron: "0 0 * * *"
-  # 手动触发
   workflow_dispatch:
-  
+
+permissions:
+  contents: write
+
 jobs:
   update-citations:
     runs-on: ubuntu-latest
-
     steps:
-      # 1) 检出代码
       - uses: actions/checkout@v3
+        with:
+          persist-credentials: false
 
       # 2) 设置 Python 环境
       - name: Set up Python
@@ -40,3 +41,5 @@ jobs:
           # 若没有变化，会报错，故用 || echo "No changes to commit"
           git commit -m "Update arxiv citation counts [skip ci]" || echo "No changes to commit"
           git push
+
+
