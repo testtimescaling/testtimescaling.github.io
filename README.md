@@ -6,10 +6,12 @@
   In your repository settings: enable template repository, add your 1280×640 social image, auto delete head branches.
   Add your open source license, GitHub uses MIT license.
 -->
+<div align="center">
+<h1>Awesome Test-time-Scaling in LLMs</h1>
+</div>
 
-# Awesome-Test-time-Scaling-in-LLMs
-
-![Arxiv Citations](https://img.shields.io/endpoint?url=https://testtimescaling.github.io/arxiv_citations.json&style=for-the-badge)
+![Stars](https://img.shields.io/github/stars/testtimescaling/testtimescaling.github.io?style=for-the-badge)
+![Citations](https://img.shields.io/endpoint?url=https://testtimescaling.github.io/arxiv_citations.json&style=for-the-badge)
 
 _Create a site or blog from your GitHub repositories with GitHub Pages._
 
