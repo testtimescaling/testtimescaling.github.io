@@ -46,10 +46,10 @@ As enthusiasm for scaling computation (data and parameters) in the pertaining er
   - Supervised Fine-Tuning (SFT): by training on synthetic or distilled long CoT examples, SFT allows a model to imitate extended reasoning patterns.
   - Reinforcement Learning (RL): RL can guide a model’s policy to generate longer or more accurate solutions.
 - **Inference**
-  - Stimulation: It basically stimulates the LLM to generate more and longer samples instead of generating individual samples directly.
-  - Verification: The verification process plays an important role in the TTS, and it can be adapted to: i) directly selects the output sample among various ones, under the Parallel Scaling paradigm; ii) guides the stimulation process and determines when to stop, under the Sequential Scaling paradigm; iii) serves as the criteria in the search process; iv) determines what sample to aggregate and how to aggregate them, e.g., weights.
-  - Search: Search is a time-tested technique for retrieving relevant information from large databases, and it can also systematically explore the potential outputs of LLMs to improve complex reasoning tasks.
-  - Aggregation: Aggregation techniques consolidate multiple solutions into a final decision to enhance the reliability and robustness of model predictions at test time.
+  - Stimulation (STI): It basically stimulates the LLM to generate more and longer samples instead of generating individual samples directly.
+  - Verification (VER): The verification process plays an important role in the TTS, and it can be adapted to: i) directly selects the output sample among various ones, under the Parallel Scaling paradigm; ii) guides the stimulation process and determines when to stop, under the Sequential Scaling paradigm; iii) serves as the criteria in the search process; iv) determines what sample to aggregate and how to aggregate them, e.g., weights.
+  - Search (SEA): Search is a time-tested technique for retrieving relevant information from large databases, and it can also systematically explore the potential outputs of LLMs to improve complex reasoning tasks.
+  - Aggregation (AGG): Aggregation techniques consolidate multiple solutions into a final decision to enhance the reliability and robustness of model predictions at test time.
 
 ### **Where to Scale**
 - **Reasoning**: Math, Code, Science, Game & Strategy, Medical and so on.
@@ -62,9 +62,9 @@ As enthusiasm for scaling computation (data and parameters) in the pertaining er
 - **Scalability**: Scalability quantifies how well models improve with more test-time compute (e.g., tokens or steps).
 
 ## 🔍 Paper Tables
-| Method | What | How → |        |        |        |        |        | Where |
+| Method (Papers Names) | What | How → |        |        |        |        |        | Where |
 |--------|------|-------|--------|--------|--------|--------|--------|-------|
-|        |      | SFT   | RL     | STIMULATION | SEARCH | VERIFICATION | AGGREGATION |
+|        |      | SFT   | RL     | STI | SEA | VER | AGG |
 |<li><i><b>Generative language modeling for automated theorem proving</b></i>, Polu et al., <a href="https://arxiv.org/abs/2009.03393" target="_blank"><img src="https://img.shields.io/badge/arXiv-2020.09-red" alt="arXiv Badge"></a></li>|123|123|123|123|123|123|123|123|123|
 
 
