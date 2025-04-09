@@ -35,30 +35,31 @@ As enthusiasm for scaling computation (data and parameters) in the pertaining er
 ## 🧬 Taxonomy
 
 ### **What to Scale**
-- **Parallel Scaling**
-- **Sequential Scaling**
-- **Hybrid Scaling**
-- **Internal Scaling**
+``What to scale'' refers to the specific form of TTS that is expanded or adjusted to enhance an LLM’s performance during inference.
+- **Parallel Scaling** improves test-time performance by generating multiple outputs in parallel and then aggregating them into a final answer.
+- **Sequential Scaling** involves explicitly directing later computations based on intermediate steps.
+- **Hybrid Scaling** exploits the complementary benefits of parallel and sequential scaling.
+- **Internal Scaling** elicits a model to autonomously determine how much computation to allocate for reasoning during testing within the model’s internal parameters, instead of external human-guided strategies.
 
 ### **How to Scale**
 - **Tuning**
-  - SFT (Supervised Fine-Tuning)
-  - RL (Reinforcement Learning)
+  - Supervised Fine-Tuning (SFT): by training on synthetic or distilled long CoT examples, SFT allows a model to imitate extended reasoning patterns.
+  - Reinforcement Learning (RL): RL can guide a model’s policy to generate longer or more accurate solutions.
 - **Inference**
-  - Stimulation
-  - Verification
-  - Search
-  - Aggregation
+  - Stimulation: It basically stimulates the LLM to generate more and longer samples instead of generating individual samples directly.
+  - Verification: The verification process plays an important role in the TTS, and it can be adapted to: i) directly selects the output sample among various ones, under the Parallel Scaling paradigm; ii) guides the stimulation process and determines when to stop, under the Sequential Scaling paradigm; iii) serves as the criteria in the search process; iv) determines what sample to aggregate and how to aggregate them, e.g., weights.
+  - Search: Search is a time-tested technique for retrieving relevant information from large databases, and it can also systematically explore the potential outputs of LLMs to improve complex reasoning tasks.
+  - Aggregation: Aggregation techniques consolidate multiple solutions into a final decision to enhance the reliability and robustness of model predictions at test time.
 
 ### **Where to Scale**
-- Reasoning
-- General
+- **Reasoning**: Math, Code, Science, Game & Strategy, Medical and so on.
+- **General-Purpose**: Basics, Agents,  Knowledge, Open-Ended, Multi-Modal and so on.
 
 ### **How Well to Scale**
-- Accuracy
-- Efficiency
-- Controllability
-- Scalability
+- **Performance**: This dimension measures the correctness and robustness of outputs.
+- **Efficiency**: it captures the cost-benefit tradeoffs of TTS methods.
+- **Controllability**: This dimension assesses whether TTS methods adhere to resource or output constraints, such as compute budgets or output lengths.
+- **Scalability**: Scalability quantifies how well models improve with more test-time compute (e.g., tokens or steps).
 
 ## 🔍 Paper Tables
 | Method | What | How → |        |        |        |        |        | Where |
