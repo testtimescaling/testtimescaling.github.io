@@ -18,6 +18,8 @@
   <img src="https://img.shields.io/endpoint?url=https://testtimescaling.github.io/arxiv_citations.json&style=for-the-badge&color=green"/>
 </p>
 
+This responsity, **Awesome Test-time-Scaling in LLMs**, 
+
 
 | Method | What | How → |        |        |        |        |        | Where |
 |--------|------|-------|--------|--------|--------|--------|--------|-------|
