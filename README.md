@@ -30,9 +30,37 @@ Our repository, **Awesome Test-time-Scaling in LLMs**, gathers available papers 
 - **[31/Mar/2025]** 📌 Our initial survey is on [**Arxiv**](https://arxiv.org/abs/2503.24235)!
 
 ## 📘 Introduction
-As enthusiasm for scaling computation (data and parameters) in the pertaining era gradually diminished, test-time scaling (TTS)—also referred to as “test-time computing”—has emerged as a prominent research focus. Recent studies demonstrate that TTS can further elicit the problem-solving capabilities of large language models (LLMs), enabling significant breakthroughs not only in reasoning-intensive tasks, such as mathematics and coding, but also in general tasks like open-ended Q&A. However, despite the explosion of recent efforts in this area, there remains an urgent need for a comprehensive survey offering systemic understanding. To fill this gap, we propose a unified, hierarchical framework structured along four orthogonal dimensions of TTS research: **what to scale**, **how to scale**, **where to scale**, and **how well to scale**.
+As enthusiasm for scaling computation (data and parameters) in the pertaining era gradually diminished, test-time scaling (TTS)—also referred to as “test-time computing”—has emerged as a prominent research focus. Recent studies demonstrate that TTS can further elicit the problem-solving capabilities of large language models (LLMs), enabling significant breakthroughs not only in reasoning-intensive tasks, such as mathematics and coding, but also in general tasks like open-ended Q&A. However, despite the explosion of recent efforts in this area, there remains an urgent need for a comprehensive survey offering systemic understanding. To fill this gap, we propose a unified, hierarchical framework structured along four orthogonal dimensions of TTS research: **what to scale**, **how to scale**, **where to scale**, and **how well to scale**. Building upon this taxonomy, we conduct a holistic review of methods, application scenarios, and assessment aspects, and present an organized decomposition that highlights the unique contributions of individual methods within the broader TTS landscape.
 
+## 🧬 Taxonomy
 
+### **What to Scale**
+- **Parallel Scaling**
+- **Sequential Scaling**
+- **Hybrid Scaling**
+- **Internal Scaling**
+
+### **How to Scale**
+- **Tuning**
+  - SFT (Supervised Fine-Tuning)
+  - RL (Reinforcement Learning)
+- **Inference**
+  - Stimulation
+  - Verification
+  - Search
+  - Aggregation
+
+### **Where to Scale**
+- Reasoning
+- General
+
+### **How Well to Scale**
+- Accuracy
+- Efficiency
+- Controllability
+- Scalability
+
+## 🔍 Paper Tables
 | Method | What | How → |        |        |        |        |        | Where |
 |--------|------|-------|--------|--------|--------|--------|--------|-------|
 |        |      | SFT   | RL     | STIMULATION | SEARCH | VERIFICATION | AGGREGATION |
