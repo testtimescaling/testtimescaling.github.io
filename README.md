@@ -43,13 +43,13 @@ As enthusiasm for scaling computation (data and parameters) in the pertaining er
 
 ### **How to Scale**
 - **Tuning**
-  - Supervised Fine-Tuning (SFT): by training on synthetic or distilled long CoT examples, SFT allows a model to imitate extended reasoning patterns.
-  - Reinforcement Learning (RL): RL can guide a model’s policy to generate longer or more accurate solutions.
+  - Supervised Fine-Tuning (_SFT_): by training on synthetic or distilled long CoT examples, SFT allows a model to imitate extended reasoning patterns.
+  - Reinforcement Learning (_RL_): RL can guide a model’s policy to generate longer or more accurate solutions.
 - **Inference**
-  - Stimulation (STI): It basically stimulates the LLM to generate more and longer samples instead of generating individual samples directly.
-  - Verification (VER): The verification process plays an important role in the TTS, and it can be adapted to: i) directly selects the output sample among various ones, under the Parallel Scaling paradigm; ii) guides the stimulation process and determines when to stop, under the Sequential Scaling paradigm; iii) serves as the criteria in the search process; iv) determines what sample to aggregate and how to aggregate them, e.g., weights.
-  - Search (SEA): Search is a time-tested technique for retrieving relevant information from large databases, and it can also systematically explore the potential outputs of LLMs to improve complex reasoning tasks.
-  - Aggregation (AGG): Aggregation techniques consolidate multiple solutions into a final decision to enhance the reliability and robustness of model predictions at test time.
+  - Stimulation (_STI_): It basically stimulates the LLM to generate more and longer samples instead of generating individual samples directly.
+  - Verification (_VER_): The verification process plays an important role in the TTS, and it can be adapted to: i) directly selects the output sample among various ones, under the Parallel Scaling paradigm; ii) guides the stimulation process and determines when to stop, under the Sequential Scaling paradigm; iii) serves as the criteria in the search process; iv) determines what sample to aggregate and how to aggregate them, e.g., weights.
+  - Search (_SEA_): Search is a time-tested technique for retrieving relevant information from large databases, and it can also systematically explore the potential outputs of LLMs to improve complex reasoning tasks.
+  - Aggregation (_AGG_): Aggregation techniques consolidate multiple solutions into a final decision to enhance the reliability and robustness of model predictions at test time.
 
 ### **Where to Scale**
 - **Reasoning**: Math, Code, Science, Game & Strategy, Medical and so on.
