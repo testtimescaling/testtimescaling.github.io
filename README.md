@@ -10,6 +10,7 @@
 <h1>Awesome Test-time-Scaling in LLMs</h1>
 </div>
 
+![Contributors](https://img.shields.io/badge/Contributors-10-red?style=for-the-badge)
 ![Stars](https://img.shields.io/github/stars/testtimescaling/testtimescaling.github.io?style=for-the-badge)
 ![Citations](https://img.shields.io/endpoint?url=https://testtimescaling.github.io/arxiv_citations.json&style=for-the-badge)
 
