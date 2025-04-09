@@ -25,6 +25,9 @@ Our repository, **Awesome Test-time-Scaling in LLMs**, gathers available papers 
   <p><b>Figure 1:</b> A Visual Map and Comparison: From <i>What to Scale</i> to <i>How to Scale</i>.</p>
 </div>
 
+## 📢 News and Updates
+- **[9/Apr/2025]** 📌 Our repository is created.
+- **[31/Mar/2025]** 📌 Our initial survey is on [**Arxiv**](https://arxiv.org/abs/2503.24235)!
 
 
 | Method | What | How → |        |        |        |        |        | Where |
