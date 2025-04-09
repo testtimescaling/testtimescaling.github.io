@@ -19,10 +19,9 @@
 
 Our repository, **Awesome Test-time-Scaling in LLMs**, gathers available papers on test-time scaling, to our current knowledge. Unlike other repositories that categorize papers, we decompose each paper's contributions based on the taxonomy provided by ["What, How, Where, and How Well? A Survey on Test-Time Scaling in Large Language Models"](https://arxiv.org/abs/2503.24235) facilitating easier understand and comparison for readers.
 
-![image](figs/TTS-how.png)
 
 <div align="center">
-  <img src="figs/TTS-how.png" width="800"/>
+  <img src="figs/TTS-how.png" width="900"/>
   <p><b>Figure 1:</b> A Visual Map and Comparison: From <i>What to Scale</i> to <i>How to Scale</i>.</p>
 </div>
 
