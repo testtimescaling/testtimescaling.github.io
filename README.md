@@ -21,6 +21,12 @@ Our repository, **Awesome Test-time-Scaling in LLMs**, gathers available papers 
 
 ![image](figs/TTS-how.png)
 
+<div align="center">
+  <img src="figs/TTS-how.png" width="800"/>
+  <p><b>Figure 1:</b> A Visual Map and Comparison: From <i>What to Scale</i> to <i>How to Scale</i>.</p>
+</div>
+
+
 
 | Method | What | How → |        |        |        |        |        | Where |
 |--------|------|-------|--------|--------|--------|--------|--------|-------|
