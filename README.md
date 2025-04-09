@@ -18,6 +18,11 @@
   <img src="https://img.shields.io/endpoint?url=https://testtimescaling.github.io/arxiv_citations.json&style=for-the-badge&color=green"/>
 </p>
 
+
+| Method | What | How → |        |        |        |        |        | Where |
+|--------|------|-------|--------|--------|--------|--------|--------|-------|
+|        |      | SFT   | RL     | STIMULATION | SEARCH | VERIFICATION | AGGREGATION | 
+
 _Create a site or blog from your GitHub repositories with GitHub Pages._
 
 </header>
