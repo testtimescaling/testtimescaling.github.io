@@ -10,7 +10,7 @@
 <h1>Awesome Test-time-Scaling in LLMs</h1>
 </div>
 
-
+%
 
 <p align="center">
   <img src="https://img.shields.io/badge/Contributors-10-red?style=for-the-badge" />
