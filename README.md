@@ -21,7 +21,8 @@
 
 | Method | What | How → |        |        |        |        |        | Where |
 |--------|------|-------|--------|--------|--------|--------|--------|-------|
-|        |      | SFT   | RL     | STIMULATION | SEARCH | VERIFICATION | AGGREGATION | 
+|        |      | SFT   | RL     | STIMULATION | SEARCH | VERIFICATION | AGGREGATION |
+|Generative language modeling for automated theorem proving|123|123|123|123|123|123|123|123|123|
 
 _Create a site or blog from your GitHub repositories with GitHub Pages._
 
