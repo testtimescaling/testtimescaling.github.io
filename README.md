@@ -22,7 +22,7 @@
 | Method | What | How → |        |        |        |        |        | Where |
 |--------|------|-------|--------|--------|--------|--------|--------|-------|
 |        |      | SFT   | RL     | STIMULATION | SEARCH | VERIFICATION | AGGREGATION |
-|Generative language modeling for automated theorem proving|123|123|123|123|123|123|123|123|123|
+|<li><i><b>Generative language modeling for automated theorem proving</b></i>, Polu et al., <a href="https://arxiv.org/abs/2009.03393" target="_blank"><img src="https://img.shields.io/badge/arXiv-2020.09-red" alt="arXiv Badge"></a></li>|123|123|123|123|123|123|123|123|123|
 
 _Create a site or blog from your GitHub repositories with GitHub Pages._
 
