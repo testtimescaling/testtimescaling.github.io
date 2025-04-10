@@ -34,14 +34,14 @@ As enthusiasm for scaling computation (data and parameters) in the pertaining er
 
 ## 🧬 Taxonomy
 
-### **What to Scale**
+### 1. **What to Scale**
 ``What to scale'' refers to the specific form of TTS that is expanded or adjusted to enhance an LLM’s performance during inference.
 - **Parallel Scaling** improves test-time performance by generating multiple outputs in parallel and then aggregating them into a final answer.
 - **Sequential Scaling** involves explicitly directing later computations based on intermediate steps.
 - **Hybrid Scaling** exploits the complementary benefits of parallel and sequential scaling.
 - **Internal Scaling** elicits a model to autonomously determine how much computation to allocate for reasoning during testing within the model’s internal parameters, instead of external human-guided strategies.
 
-### **How to Scale**
+### 2. **How to Scale**
 - **Tuning**
   - Supervised Fine-Tuning (_SFT_): by training on synthetic or distilled long CoT examples, SFT allows a model to imitate extended reasoning patterns.
   - Reinforcement Learning (_RL_): RL can guide a model’s policy to generate longer or more accurate solutions.
@@ -51,21 +51,21 @@ As enthusiasm for scaling computation (data and parameters) in the pertaining er
   - Search (_SEA_): Search is a time-tested technique for retrieving relevant information from large databases, and it can also systematically explore the potential outputs of LLMs to improve complex reasoning tasks.
   - Aggregation (_AGG_): Aggregation techniques consolidate multiple solutions into a final decision to enhance the reliability and robustness of model predictions at test time.
 
-### **Where to Scale**
+### 3. **Where to Scale**
 - **Reasoning**: Math, Code, Science, Game & Strategy, Medical and so on.
 - **General-Purpose**: Basics, Agents,  Knowledge, Open-Ended, Multi-Modal and so on.
 
-### **How Well to Scale**
+### 4. **How Well to Scale**
 - **Performance**: This dimension measures the correctness and robustness of outputs.
 - **Efficiency**: it captures the cost-benefit tradeoffs of TTS methods.
 - **Controllability**: This dimension assesses whether TTS methods adhere to resource or output constraints, such as compute budgets or output lengths.
 - **Scalability**: Scalability quantifies how well models improve with more test-time compute (e.g., tokens or steps).
 
 ## 🔍 Paper Tables
-| Method (Papers Names) | What | How → |        |        |        |        |        | Where |
-|--------|------|-------|--------|--------|--------|--------|--------|-------|
-|        |      | SFT   | RL     | STI | SEA | VER | AGG |
-|<li><i><b>Generative language modeling for automated theorem proving</b></i>, Polu et al., <a href="https://arxiv.org/abs/2009.03393" target="_blank"><img src="https://img.shields.io/badge/arXiv-2020.09-red" alt="arXiv Badge"></a></li>|123|123|123|123|123|123|123|123|123|
+| Method (Papers Names) | What | How → |        |        |        |        |        | Where | How Well |
+|--------|------|-------|--------|--------|--------|--------|--------|-------|-------|
+|        |      | SFT   | RL     | STI | SEA | VER | AGG |        |        |
+|<li><i><b>Scaling llm test-time compute optimally can be more effective than scaling model parameters.</b></i>, Snell et al., <a href="https://arxiv.org/abs/2408.03314" target="_blank"><img src="https://img.shields.io/badge/arXiv-2408.03314-red" alt="arXiv Badge"></a></li>|Parallel,Sequential|✗|✗|✗|Beam,LookAhead|Verifier|(Weighted) Best-of-N,Stepwise Aggregation|Math|Pass@1, FLOPsMatched Evaluation|
 
 
 
