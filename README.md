@@ -62,42 +62,11 @@ As enthusiasm for scaling computation (data and parameters) in the pertaining er
 - **Scalability**: Scalability quantifies how well models improve with more test-time compute (e.g., tokens or steps).
 
 ## 🔍 Paper Tables
-| <div style="width:300px">Method(Papers-Names)</div> | What | How → |        |        |        |        |        | Where | How Well |
+| <div style="width:300px">Method(PapersNames)</div> | What | How → |        |        |        |        |        | Where | How Well |
 |--------|------|-------|--------|--------|--------|--------|--------|-------|-------|
 |        |      | SFT   | RL     | STI | SEA | VER | AGG |        |        |
 |<i><b>Scaling llm test-time compute optimally can be more effective than scaling model parameters.</b></i>, Snell et al., <a href="https://arxiv.org/abs/2408.03314" target="_blank"><img src="https://img.shields.io/badge/arXiv-2408.03314-red" alt="arXiv Badge"></a></li>|Parallel,<br>Sequential|✗|✗|✗|Beam,<br>LookAhead|Verifier|(Weighted) Best-of-N,<br>Stepwise Aggregation|Math|Pass@1,<br>FLOPsMatched Evaluation|
 
-
-<table>
-  <thead>
-    <tr>
-      <th style="width: 500px;">Method (Papers-Names)</th>
-      <th>What</th>
-      <th>SFT</th>
-      <th>RL</th>
-      <th>STI</th>
-      <th>SEA</th>
-      <th>VER</th>
-      <th>AGG</th>
-      <th>Where</th>
-      <th>How Well</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><em>Scaling LLM test-time compute optimally can be more effective than scaling model parameters</em><br>Snell et al.,<br><code>arXiv:2408.03314</code></td>
-      <td>Parallel,<br>Sequential</td>
-      <td>X</td>
-      <td>X</td>
-      <td>X</td>
-      <td>Beam,<br>LookAhead</td>
-      <td>Verifier</td>
-      <td>(Weighted)<br>Best-of-N,<br>Stepwise Aggregation</td>
-      <td>Math</td>
-      <td>Pass@1,<br>FLOPsMatched<br>Evaluation</td>
-    </tr>
-  </tbody>
-</table>
 
 
 
