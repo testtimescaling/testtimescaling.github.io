@@ -65,7 +65,7 @@ As enthusiasm for scaling computation (data and parameters) in the pertaining er
 | Method (Papers Names) | What | How → |        |        |        |        |        | Where | How Well |
 |--------|------|-------|--------|--------|--------|--------|--------|-------|-------|
 |        |      | SFT   | RL     | STI | SEA | VER | AGG |        |        |
-|<li><i><b>Scaling llm test-time compute optimally can be more effective than scaling model parameters.</b></i>, Snell et al., <a href="https://arxiv.org/abs/2408.03314" target="_blank"><img src="https://img.shields.io/badge/arXiv-2408.03314-red" alt="arXiv Badge"></a></li>|Parallel,Sequential|✗|✗|✗|Beam,LookAhead|Verifier|(Weighted) Best-of-N,Stepwise Aggregation|Math|Pass@1, FLOPsMatched Evaluation|
+|<li><i><b>Scaling llm test-time compute optimally can be more effective than scaling model parameters.</b></i>, Snell et al., <a href="https://arxiv.org/abs/2408.03314" target="_blank"><img src="https://img.shields.io/badge/arXiv-2408.03314-red" alt="arXiv Badge"></a></li>|Parallel,<br>Sequential|✗|✗|✗|Beam,<br>LookAhead|Verifier|(Weighted) Best-of-N,<br>Stepwise Aggregation|Math|Pass@1,<br>FLOPsMatched Evaluation|
 
 
 
