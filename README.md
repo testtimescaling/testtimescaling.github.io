@@ -31,6 +31,10 @@ Our repository, **Awesome Test-time-Scaling in LLMs**, gathers available papers 
 
 ## 📘 Introduction
 As enthusiasm for scaling computation (data and parameters) in the pertaining era gradually diminished, test-time scaling (TTS)—also referred to as “test-time computing”—has emerged as a prominent research focus. Recent studies demonstrate that TTS can further elicit the problem-solving capabilities of large language models (LLMs), enabling significant breakthroughs not only in reasoning-intensive tasks, such as mathematics and coding, but also in general tasks like open-ended Q&A. However, despite the explosion of recent efforts in this area, there remains an urgent need for a comprehensive survey offering systemic understanding. To fill this gap, we propose a unified, hierarchical framework structured along four orthogonal dimensions of TTS research: **what to scale**, **how to scale**, **where to scale**, and **how well to scale**. Building upon this taxonomy, we conduct a holistic review of methods, application scenarios, and assessment aspects, and present an organized decomposition that highlights the unique contributions of individual methods within the broader TTS landscape.
+<div align="center">
+  <img src="figs/TTS-intro.png" width="900"/>
+  <p><b>Figure 1:</b> A Visual Map and Comparison: From <i>What to Scale</i> to <i>How to Scale</i>.</p>
+</div>
 
 ## 🧬 Taxonomy
 
