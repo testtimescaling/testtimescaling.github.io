@@ -66,6 +66,32 @@ As enthusiasm for scaling computation (data and parameters) in the pertaining er
 |--------|------|-------|--------|--------|--------|--------|--------|-------|-------|
 |        |      | SFT   | RL     | STI | SEA | VER | AGG |        |        |
 |<i><b>Scaling llm test-time compute optimally can be more effective than scaling model parameters.</b></i>, Snell et al., <a href="https://arxiv.org/abs/2408.03314" target="_blank"><img src="https://img.shields.io/badge/arXiv-2408.03314-red" alt="arXiv Badge"></a></li>|Parallel,<br>Sequential|✗|✗|✗|Beam,<br>LookAhead|Verifier|(Weighted) Best-of-N,<br>Stepwise Aggregation|Math|Pass@1,<br>FLOPsMatched Evaluation|
+| <i><b>Meta-Reasoner</b></i><br>Sui et al., 2025 | Sequential | ✗ | ✗ | CoT +<br>Self-Repetition | ✗ | Bandit | ✗ | Game,<br>Sci,<br>Math | Accuracy,<br>Token Cost |
+| <i><b>START</b></i><br>Li et al., 2025b | Parallel,<br>Sequential | Rejection Sampling | ✗ | Hint-infer | ✗ | Tool | ✗ | Math,<br>Code | Pass@1 |
+| <i><b>AID</b></i><br>Jin et al., 2025 | Sequential | ✗ | ✗ | Adaptive Injection<br>Decoding | ✗ | ✗ | ✗ | Math,<br>Logical,<br>Commonsense | Accuracy |
+| <i><b>CoD</b></i><br>Xu et al., 2025b | Sequential | ✗ | ✗ | Chain-of-Draft | ✗ | ✗ | ✗ | Math,<br>Symbolic,<br>Commonsense | Accuracy,<br>Latency,<br>Token Cost |
+| <i><b>rStar-Math</b></i><br>Guan et al., 2025b | Hybrid | imitation | ✗ | ✗ | MCTS | PRM | ✗ | Math | Pass@1 |
+| <i><b>Liu et al.</b></i><br>2025a | Parallel,<br>Hybrid | ✗ | ✗ | ✗ | DVTS,<br>Beam Search | PRM | Best-of-N | Math | Pass@1,<br>Pass@k,<br>Majority,<br>FLOPS |
+| <i><b>Tree of Thoughts</b></i><br>Yao et al., 2023b | Hybrid | ✗ | ✗ | Propose Prompt,<br>Self-Repetition | Tree Search | Self-Evaluate | ✗ | Game,<br>Open-Ended | Success Rate,<br>LLM-as-a-Judge |
+| <i><b>MindStar</b></i><br>Kang et al., 2024 | Hybrid | ✗ | ✗ | ✗ | LevinTS | PRM | ✗ | Math | Accuracy,<br>Token Cost |
+| <i><b>REBASE</b></i><br>Wu et al., 2025a | Hybrid | ✗ | ✗ | ✗ | Reward Balanced<br>Search | RM | ✗ | Math | Test Error Rate,<br>FLOPs |
+| <i><b>RaLU</b></i><br>Li et al., 2025c | Hybrid | ✗ | ✗ | Self-Refine | Control Flow Graph | Self-Evaluate | Prompt Synthesis | Math,<br>Code | Pass@1 |
+| <i><b>PlanGen</b></i><br>Parmar et al., 2025 | Parallel,<br>Hybrid | ✗ | ✗ | MoA | ✗ | Verification Agent | Selection Agent | Math,<br>General,<br>Finance | Accuracy,<br>F1 Score |
+| <i><b>Puri et al.</b></i><br>2025 | Hybrid | ✗ | ✗ | ✗ | Particle-based<br>Monte Carlo | PRM + SSM | Particle Filtering | Math | Pass@1,<br>Budget vs. Accuracy |
+| <i><b>Archon</b></i><br>Saad-Falcon et al., 2024 | Hybrid | ✗ | ✗ | MoA,<br>Self-Repetition | ✗ | Verification Agent,<br>Unit Testing (Ensemble) | Fusion | Math,<br>Code,<br>Open-Ended | Pass@1,<br>Win Rate |
+| <i><b>AB-MCTS</b></i><br>Misaki et al., 2025 | Hybrid | ✗ | ✗ | Mixture-of-Model | AB-MCTS-(M,A) | ✗ | ✗ | Code | Pass@1,<br>RMSLE,<br>ROC-AUC |
+| <i><b>TPO</b></i><br>Wu et al., 2024a | Internal,<br>Parallel | ✗ | DPO | Think | ✗ | Judge Models | ✗ | Open-Ended | Win Rate |
+| <i><b>SPHERE</b></i><br>Singh et al., 2025 | Internal,<br>Hybrid | ✗ | DPO | Diversity Generation | MCTS | Self-Reflect | ✗ | Math | Pass@1 |
+| <i><b>MA-LoT</b></i><br>Wang et al., 2025b | Internal,<br>Sequential | imitation | ✗ | MoA | ✗ | Tool | ✗ | Math | Pass@k |
+| <i><b>OREO</b></i><br>Wang et al., 2024b | Internal,<br>Sequential | ✗ | OREO | ✗ | Beam Search | Value Function | ✗ | Math,<br>Agent | Pass@1,<br>Success Rate |
+| <i><b>DeepSeek-R1</b></i><br>DeepSeek-AI, 2025 | Internal | warmup,<br>GRPO,<br>Rule-Based | ✗ | ✗ | ✗ | ✗ | Math,<br>Code,<br>Sci | Pass@1,<br>cons@64,<br>Percentile,<br>Elo Rating,<br>Win Rate |
+| <i><b>s1</b></i><br>Muennighoff et al., 2025 | Internal | distillation | ✗ | Budget Forcing | ✗ | ✗ | ✗ | Math,<br>Sci | Pass@1,<br>Control,<br>Scaling |
+| <i><b>o1-Replication</b></i><br>Qin et al., 2024 | Internal | imitation | ✗ | ✗ | Journey Learning | PRM,<br>Critique | Multi-Agents | Math | Accuracy |
+| <i><b>AFT</b></i><br>Li et al., 2025g | Internal,<br>Parallel | imitation | ✗ | ✗ | ✗ | Fusion | ✗ | Math,<br>Open-Ended | Win Rate |
+| <i><b>Meta-CoT</b></i><br>Xiang et al., 2025 | Internal,<br>Hybrid | imitation,<br>meta-RL | Think | MCTS,<br>A* | PRM | ✗ | Math,<br>Open-Ended | Win Rate |
+| <i><b>ReasonFlux</b></i><br>Yang et al., 2025a | Internal,<br>Sequential | ✗ | PPO,<br>Trajectory | Thought Template Retrieve | ✗ | ✗ | Math | Pass@1 |
+| <i><b>l1</b></i><br>Aggarwal and Welleck, 2025b | Internal | ✗ | GRPO,<br>Length-Penalty | ✗ | ✗ | ✗ | ✗ | Math | Pass@1,<br>Length Error |
+| <i><b>Marco-o1</b></i><br>Zhao et al., 2024 | Internal,<br>Hybrid | distillation,<br>imitation | ✗ | Reflection Prompt | MCTS | Self-Critic | ✗ | Math | Pass@1,<br>Pass@k |
 
 
 
