@@ -62,7 +62,7 @@ As enthusiasm for scaling computation (data and parameters) in the pertaining er
 - **Scalability**: Scalability quantifies how well models improve with more test-time compute (e.g., tokens or steps).
 
 ## 🔍 Paper Tables
-| <div style="width:300px">Method(PapersNames)</div> | What | How → |        |        |        |        |        | Where | How Well |
+| <div style="width:300px">Method(PapersTitles)</div> | What | How → |        |        |        |        |        | Where | How Well |
 |--------|------|-------|--------|--------|--------|--------|--------|-------|-------|
 |        |      | SFT   | RL     | STI | SEA | VER | AGG |        |        |
 |<i><b>Scaling llm test-time compute optimally can be more effective than scaling model parameters.</b></i>, Snell et al., <a href="https://arxiv.org/abs/2408.03314" target="_blank"><img src="https://img.shields.io/badge/arXiv-2408.03314-red" alt="arXiv Badge"></a></li>|Parallel,<br>Sequential|✗|✗|✗|Beam,<br>LookAhead|Verifier|(Weighted) Best-of-N,<br>Stepwise Aggregation|Math|Pass@1,<br>FLOPsMatched Evaluation|
