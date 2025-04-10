@@ -71,7 +71,7 @@ As enthusiasm for scaling computation (data and parameters) in the pertaining er
 <table>
   <thead>
     <tr>
-      <th style="width: 300px;">Method (Papers-Names)</th>
+      <th style="width: 500px;">Method (Papers-Names)</th>
       <th>What</th>
       <th>SFT</th>
       <th>RL</th>
