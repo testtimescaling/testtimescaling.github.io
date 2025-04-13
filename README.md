@@ -27,9 +27,10 @@ Our repository, **Awesome Test-time-Scaling in LLMs**, gathers available papers 
 
 ## 📢 News and Updates
 - **[13/Apr/2025]** 📌 The Second Version is released:
-    -- We correct some typos;
-    -- We include "Evaluation" and "Agentic" Tasks, which were enhanced by TTS;
-    -- We revise the figures and tables, like the color of table 1.
+
+    1. We correct some typos;
+    2. We include "Evaluation" and "Agentic" Tasks, which were enhanced by TTS;
+    3. We revise the figures and tables, like the color of table 1.
 - **[9/Apr/2025]** 📌 Our repository is created.
 - **[31/Mar/2025]** 📌 Our initial survey is on [**Arxiv**](https://arxiv.org/abs/2503.24235)!
 
