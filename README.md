@@ -15,7 +15,6 @@
   <img src="https://img.shields.io/badge/Contributors-10-red?style=for-the-badge" />
   <img src="https://img.shields.io/github/stars/testtimescaling/testtimescaling.github.io?style=for-the-badge&color=blue"/>
   <img src="https://img.shields.io/endpoint?url=https://testtimescaling.github.io/arxiv_citations.json&style=for-the-badge&color=green"/>
-  <img src="https://img.shields.io/github/stars/testtimescaling/testtimescaling.github.io?style=for-the-badge" />
 </p>
 
 Our repository, **Awesome Test-time-Scaling in LLMs**, gathers available papers on test-time scaling, to our current knowledge. Unlike other repositories that categorize papers, we decompose each paper's contributions based on the taxonomy provided by ["What, How, Where, and How Well? A Survey on Test-Time Scaling in Large Language Models"](https://arxiv.org/abs/2503.24235) facilitating easier understand and comparison for readers.
