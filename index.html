@@ -174,62 +174,69 @@
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
+        
+        <!-- 轮播项1 -->
         <div class="item">
-          <div class="image-container">
+          <figure class="image-container">
             <img src="figs/TTS-intro.png" alt="TTS Intro"/>
-	    <figcaption class="subtitle is-6" style="margin-top: 1rem;">
-	      Figure 1: Comparison of Scaling Paradigms in Pre-training and Test-time Phases.
-	    </figcaption>
-          </div>
+            <figcaption class="subtitle is-6">Figure 1: Comparison of Scaling Paradigms in Pre-training and Test-time Phases.</figcaption>
+          </figure>
         </div>
+        
+        <!-- 轮播项2 -->
         <div class="item">
-          <div class="image-container">
+          <figure class="image-container">
             <img src="figs/TTS-how.png" alt="TTS How"/>
-	    <figcaption class="subtitle is-6" style="margin-top: 0.5rem;">
-	      Figure 2: A Visual Map and Comparison: From What to Scale to How to Scale.
-	    </figcaption>
-          </div>
+            <figcaption class="subtitle is-6">Figure 2: A Visual Map and Comparison: From What to Scale to How to Scale.</figcaption>
+          </figure>
         </div>
-	<div class="item">
-          <div class="image-container">
+        
+        <!-- 轮播项3 -->
+        <div class="item">
+          <figure class="image-container">
             <img src="figs/taxonomy.png" alt="TTS Taxonomy"/>
-	    <figcaption class="subtitle is-6" style="margin-top: 0.5rem;">
-	      Figure 3: A Visual Map and Comparison: From What to Scale to How to Scale.
-	    </figcaption>
-          </div>
+            <figcaption class="subtitle is-6">Figure 3: A Visual Map and Comparison: From What to Scale to How to Scale.</figcaption>
+          </figure>
         </div>
+
       </div>
     </div>
   </div>
 </section>
 
 <style>
-  /* Center the carousel and images */
+  /* 控制整个轮播容器本身的宽度与居中 */
   .carousel {
-  /* 控制整个轮播容器本身的宽度 */
-  max-width: 600px; 
-  margin: 0 auto;
-  /* 其他居中等设置 */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.image-container {
-  width: 100%;
-  height: 300px; 
-  overflow: hidden;
-}
-.image-container img {
-  width: auto;   /* 如果你想让它填满容器宽度 */
-  height: 100%;  /* 根据比例缩放 */
-  object-fit: cover;
-}
+    max-width: 600px; 
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
 
-  /* Center the subtitle */
-  .subtitle {
-    text-align: center;
-    margin-top: 10px;
+  /* 每个图片+标题的容器 */
+  .image-container {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    text-align: center; /* 让 figcaption 居中 */
+    display: flex;
+    flex-direction: column; /* 让图片与标题在垂直方向排列 */
+    justify-content: center;
+  }
+
+  /* 图片填充容器高度，并通过 cover 实现裁剪 */
+  .image-container img {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* 标题 (figcaption) 的额外边距/样式 */
+  .image-container figcaption {
+    margin-top: 0.5rem;
+    padding: 0 1rem; /* 如果想让文字两边留点空隙 */
   }
 </style>
 <!-- End image carousel -->
