@@ -219,41 +219,412 @@
 </style>
 <!-- End image carousel -->
 
-<section class="section">
+<section class="section has-background-light">
   <div class="container">
-    <div class="has-text-centered">
-      <h1 class="title is-2">Paper List</h1>
-      <p class="subtitle is-4"></p>
-    </div>
-    <div class="content">
-      <div id="type" style="display:none;">Paper List</div>
-<h2>Analysis and Evaluation</h2>
-<h3>Analysis & Explanation for Long CoT</h3>
-<ul>
+    <!-- 标题 -->
+    <h2 class="title is-3 has-text-centered">🔍 Paper Tables</h2>
 
-      </ul>
-    </div>
-    <div class="columns is-centered">
-      <div class="column is-9">
-      </div>
-    </div>
-  </div>
+    <!-- 可以用Bulma的card或box包裹表格，让它更有层次感 -->
+    <div class="card" style="margin-top: 1.5rem;">
+      <header class="card-header">
+        <p class="card-header-title">Inference-Time Scaling Paper Summary</p>
+      </header>
+
+      <div class="card-content">
+        <div class="table-container">
+          <table class="table is-striped is-hoverable is-fullwidth">
+            <thead>
+              <tr>
+                <th style="width:300px">Method (PapersTitles)</th>
+                <th>What</th>
+                <th>How →</th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th>Where</th>
+                <th>How Well</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+                <td></td>
+                <td>SFT</td>
+                <td>RL</td>
+                <td>STI</td>
+                <td>SEA</td>
+                <td>VER</td>
+                <td>AGG</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>
+                  <i><b>Scaling llm test-time compute optimally can be more effective than scaling model parameters.</b></i>
+                  <a href="https://arxiv.org/abs/2408.03314" target="_blank">
+                    <img src="https://img.shields.io/badge/arXiv-2408.03314-red" alt="arXiv Badge">
+                  </a>
+                </td>
+                <td>Parallel,<br>Sequential</td>
+                <td>✗</td>
+                <td>✗</td>
+                <td>✗</td>
+                <td>Beam,<br>LookAhead</td>
+                <td>Verifier</td>
+                <td>(Weighted) Best-of-N,<br>Stepwise Aggregation</td>
+                <td>Math</td>
+                <td>Pass@1,<br>FLOPsMatched Evaluation</td>
+              </tr>
+              <tr>
+		<td><i><b>Multi-agent verification: Scaling test-time compute with goal verifiers</b></i><br>., <a href="https://arxiv.org/abs/2502.20379" target="_blank"><img src="https://img.shields.io/badge/arXiv-2502.20379-red" alt="arXiv Badge"></a></td>
+		<td>Parallel</td>
+		<td>✗</td>
+		<td>✗</td>
+		<td>Self-Repetition</td>
+		<td>✗</td>
+		<td>Multiple-Agent<br>Verifiers</td>
+		<td>Best-of-N</td>
+		<td>Math,<br>Code,<br>General</td>
+		<td>BoN-MAV (Cons@k),<br>Pass@1</td>
+		</tr>
+		<tr>
+		<td><i><b>Evolving Deeper LLM Thinking</b></i><br>,  <a href="https://arxiv.org/abs/2501.09891" target="_blank"><img src="https://img.shields.io/badge/arXiv-2501.09891-red" alt="arXiv Badge"></a></td>
+		<td>Sequential</td>
+		<td>✗</td>
+		<td>✗</td>
+		<td>Self-Refine</td>
+		<td>✗</td>
+		<td>Functional</td>
+		<td>✗</td>
+		<td>Open-Ended</td>
+		<td>Success Rate,<br>Token Cost</td>
+		</tr>
+		<tr>
+		<td><i><b>Meta-reasoner: Dynamic guidance for optimized inference-time reasoning in large language models</b></i><br>, <a href="https://arxiv.org/abs/2502.19918" target="_blank"><img src="https://img.shields.io/badge/arXiv-2502.19918-red" alt="arXiv Badge"></a></td>
+		<td>Sequential</td>
+		<td>✗</td>
+		<td>✗</td>
+		<td>CoT +<br>Self-Repetition</td>
+		<td>✗</td>
+		<td>Bandit</td>
+		<td>✗</td>
+		<td>Game,<br>Sci,<br>Math</td>
+		<td>Accuracy,<br>Token Cost</td>
+		</tr>
+		<tr>
+		<td><i><b>START: Self-taught reasoner with tools</b></i><br>, <a href="https://arxiv.org/abs/2503.04625" target="_blank"><img src="https://img.shields.io/badge/arXiv-2503.04625-red" alt="arXiv Badge"></a></td>
+		<td>Parallel,<br>Sequential</td>
+		<td>Rejection Sampling</td>
+		<td>✗</td>
+		<td>Hint-infer</td>
+		<td>✗</td>
+		<td>Tool</td>
+		<td>✗</td>
+		<td>Math,<br>Code</td>
+		<td>Pass@1</td>
+		</tr>
+		<tr>
+		<td><i><b>" Well, Keep Thinking": Enhancing LLM Reasoning with Adaptive Injection Decoding</b></i><br>,  <a href="https://arxiv.org/abs/2503.10167" target="_blank"><img src="https://img.shields.io/badge/arXiv-2503.10167-red" alt="arXiv Badge"></a></td>
+		<td>Sequential</td>
+		<td>✗</td>
+		<td>✗</td>
+		<td>Adaptive Injection<br>Decoding</td>
+		<td>✗</td>
+		<td>✗</td>
+		<td>✗</td>
+		<td>Math,<br>Logical,<br>Commonsense</td>
+		<td>Accuracy</td>
+		</tr>
+		<tr>
+		<td><i><b>Chain of draft: Thinking faster by writing less</b></i><br>, <a href="https://arxiv.org/abs/2502.18600" target="_blank"><img src="https://img.shields.io/badge/arXiv-2502.18600-red" alt="arXiv Badge"></a></td>
+		<td>Sequential</td>
+		<td>✗</td>
+		<td>✗</td>
+		<td>Chain-of-Draft</td>
+		<td>✗</td>
+		<td>✗</td>
+		<td>✗</td>
+		<td>Math,<br>Symbolic,<br>Commonsense</td>
+		<td>Accuracy,<br>Latency,<br>Token Cost</td>
+		</tr>
+		<tr>
+		<td><i><b>rStar-Math: Small LLMs Can Master Math Reasoning with Self-Evolved Deep Thinking</b></i><br>, <a href="https://arxiv.org/abs/2501.04519" target="_blank"><img src="https://img.shields.io/badge/arXiv-2501.04519-red" alt="arXiv Badge"></a></td>
+		<td>Hybrid</td>
+		<td>imitation</td>
+		<td>✗</td>
+		<td>✗</td>
+		<td>MCTS</td>
+		<td>PRM</td>
+		<td>✗</td>
+		<td>Math</td>
+		<td>Pass@1</td>
+		</tr>
+		<tr>
+		<td><i><b>Can 1B LLM Surpass 405B LLM? Rethinking Compute-Optimal Test-Time Scaling</b></i><br>, <a href="https://arxiv.org/abs/2502.06703" target="_blank"><img src="https://img.shields.io/badge/arXiv-2502.06703-red" alt="arXiv Badge"></a></td>
+		<td>Parallel,<br>Hybrid</td>
+		<td>✗</td>
+		<td>✗</td>
+		<td>✗</td>
+		<td>DVTS,<br>Beam Search</td>
+		<td>PRM</td>
+		<td>Best-of-N</td>
+		<td>Math</td>
+		<td>Pass@1,<br>Pass@k,<br>Majority,<br>FLOPS</td>
+		</tr>
+		<tr>
+		<td><i><b>Tree of thoughts: Deliberate problem solving with large language models</b></i><br>, <a href="https://arxiv.org/abs/2305.10601" target="_blank"><img src="https://img.shields.io/badge/arXiv-2305.10601-red" alt="arXiv Badge"></a></td>
+		<td>Hybrid</td>
+		<td>✗</td>
+		<td>✗</td>
+		<td>Propose Prompt,<br>Self-Repetition</td>
+		<td>Tree Search</td>
+		<td>Self-Evaluate</td>
+		<td>✗</td>
+		<td>Game,<br>Open-Ended</td>
+		<td>Success Rate,<br>LLM-as-a-Judge</td>
+		</tr>
+		<tr>
+		<td><i><b>Mindstar: Enhancing math reasoning in pre-trained llms at inference time</b></i><br>, <a href="https://arxiv.org/abs/2405.16265" target="_blank"><img src="https://img.shields.io/badge/arXiv-2405.16265-red" alt="arXiv Badge"></a></td>
+		<td>Hybrid</td>
+		<td>✗</td>
+		<td>✗</td>
+		<td>✗</td>
+		<td>LevinTS</td>
+		<td>PRM</td>
+		<td>✗</td>
+		<td>Math</td>
+		<td>Accuracy,<br>Token Cost</td>
+		</tr>
+		<tr>
+		<td><i><b>Inference Scaling Laws: An Empirical Analysis of Compute-Optimal Inference for LLM Problem-Solving</b></i><br>, <a href="https://arxiv.org/abs/2408.00724" target="_blank"><img src="https://img.shields.io/badge/arXiv-2408.00724-red" alt="arXiv Badge"></a></td>
+		<td>Hybrid</td>
+		<td>✗</td>
+		<td>✗</td>
+		<td>✗</td>
+		<td>Reward Balanced<br>Search</td>
+		<td>RM</td>
+		<td>✗</td>
+		<td>Math</td>
+		<td>Test Error Rate,<br>FLOPs</td>
+		</tr>
+		<tr>
+		<td><i><b>Reasoning-as-Logic-Units: Scaling Test-Time Reasoning in Large Language Models Through Logic Unit Alignment</b></i><br>, <a href="https://arxiv.org/abs/2502.07803" target="_blank"><img src="https://img.shields.io/badge/arXiv-2502.07803-red" alt="arXiv Badge"></a></td>
+		<td>Hybrid</td>
+		<td>✗</td>
+		<td>✗</td>
+		<td>Self-Refine</td>
+		<td>Control Flow Graph</td>
+		<td>Self-Evaluate</td>
+		<td>Prompt Synthesis</td>
+		<td>Math,<br>Code</td>
+		<td>Pass@1</td>
+		</tr>
+		<tr>
+		<td><i><b>PlanGEN: A Multi-Agent Framework for Generating Planning and Reasoning Trajectories for Complex Problem Solving</b></i><br>, <a href="https://arxiv.org/abs/2502.16111" target="_blank"><img src="https://img.shields.io/badge/arXiv-2502.16111-red" alt="arXiv Badge"></a></td>
+		<td>Parallel,<br>Hybrid</td>
+		<td>✗</td>
+		<td>✗</td>
+		<td>MoA</td>
+		<td>✗</td>
+		<td>Verification Agent</td>
+		<td>Selection Agent</td>
+		<td>Math,<br>General,<br>Finance</td>
+		<td>Accuracy,<br>F1 Score</td>
+		</tr>
+		<tr>
+		<td><i><b>A Probabilistic Inference Approach to Inference-Time Scaling of LLMs using Particle-Based Monte Carlo Methods</b></i><br>, <a href="https://arxiv.org/abs/2502.01618" target="_blank"><img src="https://img.shields.io/badge/arXiv-2502.01618-red" alt="arXiv Badge"></a></td>
+		<td>Hybrid</td>
+		<td>✗</td>
+		<td>✗</td>
+		<td>✗</td>
+		<td>Particle-based<br>Monte Carlo</td>
+		<td>PRM + SSM</td>
+		<td>Particle Filtering</td>
+		<td>Math</td>
+		<td>Pass@1,<br>Budget vs. Accuracy</td>
+		</tr>
+		<tr>
+		<td><i><b>Archon: An Architecture Search Framework for Inference-Time Techniques</b></i><br>, <a href="https://arxiv.org/abs/2409.15254" target="_blank"><img src="https://img.shields.io/badge/arXiv-2409.15254-red" alt="arXiv Badge"></a></td>
+		<td>Hybrid</td>
+		<td>✗</td>
+		<td>✗</td>
+		<td>MoA,<br>Self-Repetition</td>
+		<td>✗</td>
+		<td>Verification Agent,<br>Unit Testing (Ensemble)</td>
+		<td>Fusion</td>
+		<td>Math,<br>Code,<br>Open-Ended</td>
+		<td>Pass@1,<br>Win Rate</td>
+		</tr>
+		<tr>
+		<td><i><b>Wider or deeper? scaling llm inference-time compute with adaptive branching tree search</b></i><br>, <a href="https://arxiv.org/abs/2503.04412" target="_blank"><img src="https://img.shields.io/badge/arXiv-2503.04412-red" alt="arXiv Badge"></a></td>
+		<td>Hybrid</td>
+		<td>✗</td>
+		<td>✗</td>
+		<td>Mixture-of-Model</td>
+		<td>AB-MCTS-(M,A)</td>
+		<td>✗</td>
+		<td>✗</td>
+		<td>Code</td>
+		<td>Pass@1,<br>RMSLE,<br>ROC-AUC</td>
+		</tr>
+		<tr>
+		<td><i><b>Thinking llms: General instruction following with thought generation</b></i><br>, <a href="https://arxiv.org/abs/2410.10630" target="_blank"><img src="https://img.shields.io/badge/arXiv-2410.10630-red" alt="arXiv Badge"></a></td>
+		<td>Internal,<br>Parallel</td>
+		<td>✗</td>
+		<td>DPO</td>
+		<td>Think</td>
+		<td>✗</td>
+		<td>Judge Models</td>
+		<td>✗</td>
+		<td>Open-Ended</td>
+		<td>Win Rate</td>
+		</tr>
+		<tr>
+		<td><i><b>Self-Evolved Preference Optimization for Enhancing Mathematical Reasoning in Small Language Models</b></i><br>, <a href="https://arxiv.org/abs/2503.04813" target="_blank"><img src="https://img.shields.io/badge/arXiv-2503.04813-red" alt="arXiv Badge"></a></td>
+		<td>Internal,<br>Hybrid</td>
+		<td>✗</td>
+		<td>DPO</td>
+		<td>Diversity Generation</td>
+		<td>MCTS</td>
+		<td>Self-Reflect</td>
+		<td>✗</td>
+		<td>Math</td>
+		<td>Pass@1</td>
+		</tr>
+		<tr>
+		<td><i><b>MA-LoT: Multi-Agent Lean-based Long Chain-of-Thought Reasoning enhances Formal Theorem Proving</b></i><br>, <a href="https://arxiv.org/abs/2503.03205" target="_blank"><img src="https://img.shields.io/badge/arXiv-2503.03205-red" alt="arXiv Badge"></a></td>
+		<td>Internal,<br>Sequential</td>
+		<td>imitation</td>
+		<td>✗</td>
+		<td>MoA</td>
+		<td>✗</td>
+		<td>Tool</td>
+		<td>✗</td>
+		<td>Math</td>
+		<td>Pass@k</td>
+		</tr>
+		<tr>
+		<td><i><b>Offline Reinforcement Learning for LLM Multi-Step Reasoning</b></i><br>, <a href="https://arxiv.org/abs/2412.16145" target="_blank"><img src="https://img.shields.io/badge/arXiv-2412.16145-red" alt="arXiv Badge"></a></td>
+		<td>Internal,<br>Sequential</td>
+		<td>✗</td>
+		<td>OREO</td>
+		<td>✗</td>
+		<td>Beam Search</td>
+		<td>Value Function</td>
+		<td>✗</td>
+		<td>Math,<br>Agent</td>
+		<td>Pass@1,<br>Success Rate</td>
+		</tr>
+		<tr>
+		<td><i><b>DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning</b></i><br>, <a href="https://arxiv.org/abs/2501.12948" target="_blank"><img src="https://img.shields.io/badge/arXiv-2501.12948-red" alt="arXiv Badge"></a></td>
+		<td>Internal</td>
+		<td>warmup,<br>GRPO,<br>Rule-Based</td>
+		<td>✗</td>
+		<td>✗</td>
+		<td>✗</td>
+		<td>✗</td>
+		<td>Math,<br>Code,<br>Sci</td>
+		<td>Pass@1,<br>cons@64,<br>Percentile,<br>Elo Rating,<br>Win Rate</td>
+		<td></td>
+		</tr>
+		<tr>
+		<td><i><b>s1: Simple test-time scaling</b></i><br>, <a href="https://arxiv.org/abs/2501.19393" target="_blank"><img src="https://img.shields.io/badge/arXiv-2501.19393-red" alt="arXiv Badge"></a></td>
+		<td>Internal</td>
+		<td>distillation</td>
+		<td>✗</td>
+		<td>Budget Forcing</td>
+		<td>✗</td>
+		<td>✗</td>
+		<td>✗</td>
+		<td>Math,<br>Sci</td>
+		<td>Pass@1,<br>Control,<br>Scaling</td>
+		</tr>
+		<tr>
+		<td><i><b>O1 Replication Journey: A Strategic Progress Report – Part 1</b></i><br>, <a href="https://arxiv.org/abs/2410.18982" target="_blank"><img src="https://img.shields.io/badge/arXiv-2410.18982-red" alt="arXiv Badge"></a></td>
+		<td>Internal</td>
+		<td>imitation</td>
+		<td>✗</td>
+		<td>✗</td>
+		<td>Journey Learning</td>
+		<td>PRM,<br>Critique</td>
+		<td>Multi-Agents</td>
+		<td>Math</td>
+		<td>Accuracy</td>
+		</tr>
+		<tr>
+		<td><i><b>From drafts to answers: Unlocking llm potential via aggregation fine-tuning</b></i><br>, <a href="https://arxiv.org/abs/2501.11877" target="_blank"><img src="https://img.shields.io/badge/arXiv-2501.11877-red" alt="arXiv Badge"></a></td>
+		<td>Internal,<br>Parallel</td>
+		<td>imitation</td>
+		<td>✗</td>
+		<td>✗</td>
+		<td>✗</td>
+		<td>Fusion</td>
+		<td>✗</td>
+		<td>Math,<br>Open-Ended</td>
+		<td>Win Rate</td>
+		</tr>
+		<tr>
+		<td><i><b>Towards System 2 Reasoning in LLMs: Learning How to Think With Meta Chain-of-Though</b></i><br>,  <a href="https://arxiv.org/abs/2501.04682" target="_blank"><img src="https://img.shields.io/badge/arXiv-2501.04682-red" alt="arXiv Badge"></a></td>
+		<td>Internal,<br>Hybrid</td>
+		<td>imitation,<br>meta-RL</td>
+		<td>Think</td>
+		<td>MCTS,<br>A*</td>
+		<td>PRM</td>
+		<td>✗</td>
+		<td>Math,<br>Open-Ended</td>
+		<td>Win Rate</td>
+		<td></td>
+		</tr>
+		<tr>
+		<td><i><b>ReasonFlux: Hierarchical LLM Reasoning via Scaling Thought Templates</b></i><br>, <a href="https://arxiv.org/abs/2502.06772" target="_blank"><img src="https://img.shields.io/badge/arXiv-2502.06772-red" alt="arXiv Badge"></a></td>
+		<td>Internal,<br>Sequential</td>
+		<td>✗</td>
+		<td>PPO,<br>Trajectory</td>
+		<td>Thought Template Retrieve</td>
+		<td>✗</td>
+		<td>✗</td>
+		<td>Math</td>
+		<td>Pass@1</td>
+		<td></td>
+		</tr>
+		<tr>
+		<td><i><b>L1: Controlling how long a reasoning model thinks with reinforcement learning</b></i><br>, <a href="https://arxiv.org/abs/2503.04697" target="_blank"><img src="https://img.shields.io/badge/arXiv-2503.04697-red" alt="arXiv Badge"></a></td>
+		<td>Internal</td>
+		<td>✗</td>
+		<td>GRPO,<br>Length-Penalty</td>
+		<td>✗</td>
+		<td>✗</td>
+		<td>✗</td>
+		<td>✗</td>
+		<td>Math</td>
+		<td>Pass@1,<br>Length Error</td>
+		</tr>
+
+              <tr>
+                <td><i><b>Marco-o1: Towards Open Reasoning Models for Open-Ended Solutions</b></i><br>
+                  <a href="https://arxiv.org/abs/2411.14405" target="_blank">
+                    <img src="https://img.shields.io/badge/arXiv-2411.14405-red" alt="arXiv Badge">
+                  </a>
+                </td>
+                <td>Internal,<br>Hybrid</td>
+                <td>distillation,<br>imitation</td>
+                <td>✗</td>
+                <td>Reflection Prompt</td>
+                <td>MCTS</td>
+                <td>Self-Critic</td>
+                <td>✗</td>
+                <td>Math</td>
+                <td>Pass@1,<br>Pass@k</td>
+              </tr>
+            </tbody>
+          </table>
+        </div> <!-- end .table-container -->
+      </div> <!-- end .card-content -->
+    </div> <!-- end .card -->
+  </div> <!-- end .container -->
 </section>
-
-
-  <!-- ===================== PAPER LIST PLACEHOLDER ===================== -->
-  <section class="section">
-    <div class="container is-max-desktop">
-      <div class="has-text-centered">
-        <h1 class="title is-2">Paper List</h1>
-      </div>
-      <div class="content">
-        <h2>Analysis and Evaluation</h2>
-        <h3>Analysis &amp; Explanation for Long CoT</h3>
-        <ul><!-- populate later --></ul>
-      </div>
-    </div>
-  </section>
 <!-- Youtube video -->
 <!-- <section class="hero is-small is-light">
   <div class="hero-body">
