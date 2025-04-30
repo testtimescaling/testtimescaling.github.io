@@ -182,6 +182,13 @@
             <figcaption class="subtitle is-6">Figure 1: Comparison of Scaling Paradigms in Pre-training and Test-time Phases.</figcaption>
           </figure>
         </div>
+	<div class="image-wrapper">
+          <img src="figs/TTS-intro.png" alt="TTS Intro"/>
+        </div>
+        <!-- 这里放标题，不被挤在 300px 高度里 -->
+        <figcaption class="subtitle is-6">
+          Figure 1: Comparison of Scaling Paradigms in Pre-training and Test-time Phases.
+        </figcaption>
         
         <!-- 轮播项2 -->
         <div class="item">
@@ -205,38 +212,47 @@
 </section>
 
 <style>
-  /* 控制整个轮播容器本身的宽度与居中 */
   .carousel {
-    max-width: 600px; 
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-  }
+  max-width: 600px; 
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
 
-  /* 每个图片+标题的容器 */
-  .image-container {
-   width: 100%;
-   height: 300px;
-   overflow: hidden;
-   text-align: center;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
- }
+/* 最外层 figure，放图 + 标题 */
+.image-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 让标题居中 */
+  margin: 0;          /* 去掉 figure 默认的margin */
+}
 
- /* 关键：使用 object-fit: contain，让图片整体可见 */
- .image-container img {
-   width: 100%; 
-   height: 100%;
-   object-fit: contain; /* 原先是 cover，现在改为 contain */
- }
-  /* 标题 (figcaption) 的额外边距/样式 */
-  .image-container figcaption {
-    margin-top: 0.5rem;
-    padding: 0 1rem; /* 如果想让文字两边留点空隙 */
-  }
+/* 专门存放图片的子容器 */
+.image-wrapper {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* 让图片在容器里居中 */
+}
+
+/* 图片保持完整可见 */
+.image-wrapper img {
+  width: auto;
+  height: 100%;
+  object-fit: contain; 
+}
+
+/* 标题样式 */
+.image-container figcaption {
+  margin-top: 0.5rem;
+  text-align: center;
+  padding: 0 1rem; /* 如果想让文字两边留点空隙 */
+}
 </style>
 <!-- End image carousel -->
 
