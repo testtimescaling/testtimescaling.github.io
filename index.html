@@ -696,6 +696,10 @@
           <span class="icon"><i class="fab fa-github"></i></span><span>Submit your Guidelines</span>
         </a>
       </div>
+      <!-- 新增：Issues 列表显示区 -->
+      <div id="issues-list" class="content has-text-left" style="margin-top: 1.5rem;">
+        <!-- 这里将通过JS填充列表内容 -->
+      </div>
     </div>
   </section>
 
@@ -781,6 +785,52 @@
       autoplay: true,
     })
   });
+</script>
+
+<script>
+  async function loadIssues() {
+    // 1) 替换为你自己的用户名和仓库名
+    const owner = 'testtimescaling';  
+    const repo = 'testtimescaling.github.io';  
+    const label = 'guideline';
+
+    // 2) GitHub API请求URL，可根据需要添加 state=open / per_page=10 等
+    const url = `https://api.github.com/repos/${owner}/${repo}/issues?labels=${label}&state=open&per_page=10`;
+
+    try {
+      // 3) 发起请求，获取Issues列表
+      const res = await fetch(url);
+      const issues = await res.json();
+
+      // 4) 找到HTML中专门放置Issues列表的容器
+      const wrap = document.getElementById('issues-list');
+      if (!Array.isArray(issues) || issues.length === 0) {
+        // 如果没有任何Issue，就自行决定要不要显示空提示
+        // wrap.innerHTML = '<p>暂无讨论</p>';
+        return;
+      }
+
+      // 5) 生成一个ul，逐个显示Issue标题和链接
+      const ul = document.createElement('ul');
+      issues.forEach(issue => {
+        const li = document.createElement('li');
+        li.innerHTML = `
+          <a href="${issue.html_url}" target="_blank">${issue.title}</a>
+          <span class="has-text-grey-light">#${issue.number} · by ${issue.user.login}</span>
+        `;
+        ul.appendChild(li);
+      });
+      // 6) 把ul插入wrap
+      wrap.appendChild(ul);
+
+    } catch (err) {
+      console.error('Load issues failed:', err);
+      // 这里可以放一个提示或忽略
+    }
+  }
+
+  // 等页面加载完成后再调用
+  document.addEventListener('DOMContentLoaded', loadIssues);
 </script>
 
 </body>
