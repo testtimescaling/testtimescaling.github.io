@@ -26,23 +26,16 @@
 
   <title>What, How, Where, and How Well? A Survey on Test-Time Scaling in Large Language Models</title>
   <link rel="icon" type="image/x-icon" href="figs/goku.jpg">
+  
+  <!-- ======== 2. 字体/样式/依赖文件路径 ======== -->
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-  rel="stylesheet">
-
+        rel="stylesheet">
   <link rel="stylesheet" href="css/bulma.min.css">
   <link rel="stylesheet" href="css/bulma-carousel.min.css">
   <link rel="stylesheet" href="css/bulma-slider.min.css">
   <link rel="stylesheet" href="css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="css/index.css">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-  <script defer src="js/fontawesome.all.min.js"></script>
-  <script src="js/bulma-carousel.min.js"></script>
-  <script src="js/bulma-slider.min.js"></script>
-  <script src="js/index.js"></script>
 </head>
 <body>
 
@@ -173,25 +166,20 @@
 </section>
 <!-- End paper abstract -->
 
-<!-- Image carousel -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
+      <!-- 轮播图1: 只有 2 张图片为例 -->
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item">
-          <!-- Your image here -->
           <div class="image-container">
             <img src="figs/TTS-intro.png" alt="MY ALT TEXT"/>
           </div>
-          <h2 class="subtitle has-text-centered">
-          </h2>
         </div>
-	<div class="item">
+        <div class="item">
           <div class="image-container">
             <img src="figs/TTS-how.png" alt="MY ALT TEXT"/>
           </div>
-          <h2 class="subtitle has-text-centered">
-          </h2>
         </div>
       </div>
     </div>
@@ -414,22 +402,32 @@
     </div>
   </section>
 
-  <!-- ===================== FOOTER ===================== -->
-  <footer class="footer">
-    <div class="container">
-      <div class="columns is-centered">
-        <div class="column is-8">
-          <div class="content">
-            <p>
-              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-              You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br>
-              This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution‑ShareAlike 4.0 International License</a>.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+
+<!-- 如果不需要defer，可以改为普通<script> -->
+<script defer src="js/fontawesome.all.min.js"></script>
+<script src="js/bulma-carousel.min.js"></script>
+<script src="js/bulma-slider.min.js"></script>
+<script src="js/index.js"></script>
+
+<!-- 关键：初始化Bulma Carousel，让轮播图动起来 -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    bulmaCarousel.attach('#results-carousel', {
+      slidesToScroll: 1,
+      slidesToShow: 1,
+      loop: true,
+      autoplay: true,
+    });
+    bulmaCarousel.attach('#results-carousel-2', {
+      slidesToScroll: 1,
+      slidesToShow: 1,
+      loop: true,
+      autoplay: true,
+    });
+  });
+</script>
 
 </body>
 </html>
