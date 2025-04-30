@@ -188,26 +188,25 @@
 <style>
   /* Center the carousel and images */
   .carousel {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-
-  /* Ensure all images have the same height */
-  .image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 510px; /* Adjusted to double the height (from 300px to 600px) */
-    overflow: hidden;
-  }
-
-  .image-container img {
-    width: auto;
-    height: 100%;
-    object-fit: cover; /* Ensures the image covers the container without distortion */
-  }
+  /* 控制整个轮播容器本身的宽度 */
+  max-width: 600px; 
+  margin: 0 auto;
+  /* 其他居中等设置 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.image-container {
+  width: 100%;
+  height: 300px; 
+  overflow: hidden;
+}
+.image-container img {
+  width: 100%;   /* 如果你想让它填满容器宽度 */
+  height: auto;  /* 根据比例缩放 */
+  object-fit: cover;
+}
 
   /* Center the subtitle */
   .subtitle {
