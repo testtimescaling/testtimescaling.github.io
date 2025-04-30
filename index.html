@@ -205,8 +205,9 @@
 </section>
 
 <style>
-  .carousel {
-  max-width: 600px; 
+  /* 轮播容器：宽度+居中 */
+.carousel {
+  max-width: 600px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -214,37 +215,35 @@
   flex-wrap: wrap;
 }
 
-/* 最外层 figure，放图 + 标题 */
+/* figure容器：固定高300px + 相对定位 */
 .image-container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* 让标题居中 */
-  margin: 0;          /* 去掉 figure 默认的margin */
-}
-
-/* 专门存放图片的子容器 */
-.image-wrapper {
+  position: relative;   /* 关键：让figcaption绝对定位 */
   width: 100%;
   height: 300px;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center; /* 让图片在容器里居中 */
+  margin: 0;            /* 去掉默认figure margin */
 }
 
-/* 图片保持完整可见 */
-.image-wrapper img {
-  width: auto;
+/* 图片：完整显示，不裁剪 */
+.image-container img {
+  display: block;       /* 避免多余空白 */
+  width: 100%;
   height: 100%;
-  object-fit: contain; 
+  object-fit: contain;  /* 保持整图可见 */
 }
 
-/* 标题样式 */
+/* 标题叠加在图片底部 */
 .image-container figcaption {
-  margin-top: 0.5rem;
+  position: absolute;
+  bottom: 0;             /* 贴底部 */
+  left: 0;               /* 左对齐容器 */
+  width: 100%;           /* 占满容器宽度 */
+  color: #fff;           /* 白色文字 */
+  background-color: rgba(0,0,0,0.5); /* 半透明背景 */
   text-align: center;
-  padding: 0 1rem; /* 如果想让文字两边留点空隙 */
+  padding: 0.5rem 1rem;  /* 让标题有点内边距 */
+  margin: 0;             /* 去掉默认margin-top */
+  box-sizing: border-box;
 }
 </style>
 <!-- End image carousel -->
