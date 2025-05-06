@@ -900,17 +900,19 @@
 <script src=".js/index.js"></script>
 
 <!-- 关键：初始化Bulma Carousel，让轮播图动起来 -->
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    bulmaCarousel.attach('#results-carousel', {
-      slidesToScroll: 1,
-      slidesToShow: 1,
-      loop: true,
-      autoplay: true,
-    })
-  });
-</script>
 
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  bulmaCarousel.attach('#results-carousel', {
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    loop: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    infinite: true,
+  });
+});
+</script>
 <script>
   async function loadIssues() {
     // 1) 替换为你自己的用户名和仓库名
