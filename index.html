@@ -255,47 +255,38 @@
   flex-wrap: wrap;
 }
 
+/* figure容器：固定高300px + 相对定位 */
+.image-container {
+  position: relative;   /* 关键：让figcaption绝对定位 */
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  margin: 0;            /* 去掉默认figure margin */
+}
 
+/* 图片：完整显示，不裁剪 */
+.image-container img {
+  display: block;       /* 避免多余空白 */
+  width: 100%;
+  height: 100%;
+  object-fit: contain;  /* 保持整图可见 */
+}
 
-<style>
-    /* 例如限制轮播宽度、居中、留白等 */
-    .carousel.results-carousel {
-      max-width: 1000px; 
-      margin: 0 auto; 
-      padding: 0 1rem; 
-    }
-    /* 每个轮播项的内边距 */
-    .carousel.results-carousel .item {
-      padding: 0.5rem;
-    }
-    /* 图片容器高度/宽度自适应等 */
-    .image-container {
-      position: relative;
-      width: 100%;
-      height: auto;
-      max-height: 400px; 
-      overflow: hidden;
-      margin: 0;
-    }
-    .image-container img {
-      width: 100%;
-      height: auto;
-      object-fit: contain;
-      display: block;
-    }
-    .image-container figcaption {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background-color: rgba(0,0,0,0.5);
-      color: #fff;
-      padding: 0.5rem 1rem;
-      margin: 0;
-      box-sizing: border-box;
-      text-align: center;
-    }
+/* 标题叠加在图片底部 */
+.image-container figcaption {
+  position: absolute;
+  bottom: 0;             /* 贴底部 */
+  left: 0;               /* 左对齐容器 */
+  width: 100%;           /* 占满容器宽度 */
+  color: #fff;           /* 白色文字 */
+  background-color: rgba(0,0,0,0.5); /* 半透明背景 */
+  text-align: center;
+  padding: 0.5rem 1rem;  /* 让标题有点内边距 */
+  margin: 0;             /* 去掉默认margin-top */
+  box-sizing: border-box;
+}
 </style>
+<!-- End image carousel -->
 
 <section class="section" id="taxonomy">
   <div class="container is-max-desktop">
@@ -898,26 +889,16 @@
 <script src=".js/bulma-slider.min.js"></script>
 <script src=".js/index.js"></script>
 
-<!-- 4. 这里写 JS 逻辑（在同一个HTML里） -->
+<!-- 关键：初始化Bulma Carousel，让轮播图动起来 -->
 <script>
- document.addEventListener('DOMContentLoaded', () => {
- bulmaCarousel.attach('#results-carousel', {
- slidesToScroll: 1,
- slidesToShow: 3,  // 一次显示3个
- loop: true,
- autoplay: true,
- duration: 3000,
- autoplaySpeed: 3000,
- breakpoints: {
-   768: {
-     slidesToShow: 2 // 屏宽 < 768时，显示2个
-   },
-   480: {
-     slidesToShow: 1 // 屏宽 < 480时，显示1个
-   }
- }
- });
- });
+  document.addEventListener('DOMContentLoaded', () => {
+    bulmaCarousel.attach('#results-carousel', {
+      slidesToScroll: 1,
+      slidesToShow: 1,
+      loop: true,
+      autoplay: true,
+    })
+  });
 </script>
 
 <script>
@@ -965,8 +946,6 @@
   // 等页面加载完成后再调用
   document.addEventListener('DOMContentLoaded', loadIssues);
 </script>
-
-
 
 </body>
 </html>
