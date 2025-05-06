@@ -172,7 +172,7 @@
 
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container" style="max-width: 1200px; margin: 0 auto;">
+    <div class="container" style="max-width: 800px; margin: 0 auto; overflow: visible;">
       <!-- 注意下面 data-slides-to-show="2" 可以改成 "3" 看效果 -->
       <div id="results-carousel"
            class="carousel results-carousel"
@@ -184,10 +184,19 @@
 
         
         <!-- 轮播项1 -->
-        <div class="item">
-          <figure class="image-container">
-            <img src="figs/TTS-intro.png" alt="TTS Intro"/>
-            <figcaption class="subtitle is-6">Figure 1: Comparison of Scaling Paradigms in Pre-training and Test-time Phases.</figcaption>
+        
+	<div class="item" 
+             style="transform: rotate(-2deg) translate(5px, -5px);
+                    margin: 0 auto;">
+          <figure class="image-container" 
+                  style="max-width: 500px; margin: 0 auto;">
+            <img src="figs/TTS-intro.png" alt="TTS Intro" />
+            <figcaption class="subtitle is-6"
+                        style="position: static; 
+                               background: rgba(0,0,0,0.4);
+                               color: #fff;">
+              Figure 1: Comparison of Scaling Paradigms in Pre-training and Test-time Phases.
+            </figcaption>
           </figure>
         </div>
         
