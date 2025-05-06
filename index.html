@@ -245,48 +245,35 @@
 </section>
 
 <style>
-  /* 轮播容器：宽度+居中 */
-.carousel {
-  max-width: 600px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
+  /* Center the carousel and images */
+  .carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
 
-/* figure容器：固定高300px + 相对定位 */
-.image-container {
-  position: relative;   /* 关键：让figcaption绝对定位 */
-  width: 100%;
-  height: 300px;
-  overflow: hidden;
-  margin: 0;            /* 去掉默认figure margin */
-}
+  /* Ensure all images have the same height */
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 510px; /* Adjusted to double the height (from 300px to 600px) */
+    overflow: hidden;
+  }
 
-/* 图片：完整显示，不裁剪 */
-.image-container img {
-  display: block;       /* 避免多余空白 */
-  width: 100%;
-  height: 100%;
-  object-fit: contain;  /* 保持整图可见 */
-}
+  .image-container img {
+    width: auto;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+  }
 
-/* 标题叠加在图片底部 */
-.image-container figcaption {
-  position: absolute;
-  bottom: 0;             /* 贴底部 */
-  left: 0;               /* 左对齐容器 */
-  width: 100%;           /* 占满容器宽度 */
-  color: #fff;           /* 白色文字 */
-  background-color: rgba(0,0,0,0.5); /* 半透明背景 */
-  text-align: center;
-  padding: 0.5rem 1rem;  /* 让标题有点内边距 */
-  margin: 0;             /* 去掉默认margin-top */
-  box-sizing: border-box;
-}
+  /* Center the subtitle */
+  .subtitle {
+    text-align: center;
+    margin-top: 10px;
+  }
 </style>
-<!-- End image carousel -->
 
 <section class="section" id="taxonomy">
   <div class="container is-max-desktop">
