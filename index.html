@@ -898,17 +898,7 @@
 <script src=".js/bulma-slider.min.js"></script>
 <script src=".js/index.js"></script>
 
-<!-- 关键：初始化Bulma Carousel，让轮播图动起来 -->
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    bulmaCarousel.attach('#results-carousel', {
-      slidesToScroll: 1,
-      slidesToShow: 1,
-      loop: true,
-      autoplay: true,
-    })
-  });
-</script>
+
 
 <script>
   async function loadIssues() {
@@ -955,7 +945,6 @@
   // 等页面加载完成后再调用
   document.addEventListener('DOMContentLoaded', loadIssues);
 </script>
-<script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"></script>
 
 <!-- 4. 这里写 JS 逻辑（在同一个HTML里） -->
 <script>
