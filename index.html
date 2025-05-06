@@ -898,7 +898,27 @@
 <script src=".js/bulma-slider.min.js"></script>
 <script src=".js/index.js"></script>
 
-
+<!-- 4. 这里写 JS 逻辑（在同一个HTML里） -->
+<script>
+ document.addEventListener('DOMContentLoaded', () => {
+ bulmaCarousel.attach('#results-carousel', {
+ slidesToScroll: 1,
+ slidesToShow: 3,  // 一次显示3个
+ loop: true,
+ autoplay: true,
+ duration: 3000,
+ autoplaySpeed: 3000,
+ breakpoints: {
+   768: {
+     slidesToShow: 2 // 屏宽 < 768时，显示2个
+   },
+   480: {
+     slidesToShow: 1 // 屏宽 < 480时，显示1个
+   }
+ }
+ });
+ });
+</script>
 
 <script>
   async function loadIssues() {
@@ -946,27 +966,7 @@
   document.addEventListener('DOMContentLoaded', loadIssues);
 </script>
 
-<!-- 4. 这里写 JS 逻辑（在同一个HTML里） -->
-<script>
- document.addEventListener('DOMContentLoaded', () => {
- bulmaCarousel.attach('#results-carousel', {
- slidesToScroll: 1,
- slidesToShow: 3,  // 一次显示3个
- loop: true,
- autoplay: true,
- duration: 3000,
- autoplaySpeed: 3000,
- breakpoints: {
-   768: {
-     slidesToShow: 2 // 屏宽 < 768时，显示2个
-   },
-   480: {
-     slidesToShow: 1 // 屏宽 < 480时，显示1个
-   }
- }
- });
- });
-</script>
+
 
 </body>
 </html>
