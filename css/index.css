@@ -42,46 +42,4 @@
   </body>
 </html>
 
-/* 让轮播容器最大宽度1000px, 并居中 */
-.carousel.results-carousel {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 1rem; /* 两边保留空白 */
-}
 
-/* 每个轮播项留点内边距或外边距 */
-.carousel.results-carousel .item {
-  padding: 0.5rem;
-}
-
-/* figure容器尽量自适应高度，而不是死板300px */
-.image-container {
-  position: relative;
-  width: 100%;
-  height: auto;
-  max-height: 400px;  /* 如果想做限制，可以加个max */
-  overflow: hidden;
-  margin: 0;         /* 去掉默认figure的margin */
-}
-
-/* 保持整张图可见 */
-.image-container img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  display: block;
-}
-
-/* 标题贴底部的处理可不变 */
-.image-container figcaption {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgba(0,0,0,0.5);
-  color: #fff;
-  padding: 0.5rem 1rem;
-  margin: 0;
-  box-sizing: border-box;
-  text-align: center;
-}
