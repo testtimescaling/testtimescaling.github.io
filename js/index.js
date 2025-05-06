@@ -41,22 +41,5 @@
     </div>
   </body>
 </html>
-document.addEventListener('DOMContentLoaded', () => {
-  bulmaCarousel.attach('#results-carousel', {
-    slidesToScroll: 1,
-    slidesToShow: 3,            // 一次显示3个
-    loop: true,
-    autoplay: true,
-    duration: 3000,
-    autoplaySpeed: 3000,
-    breakpoints: {
-      768: {
-        slidesToShow: 2         // 小屏时显示2个
-      },
-      480: {
-        slidesToShow: 1         // 更小屏时1个
-      }
-    }
-  });
-});
+
 
