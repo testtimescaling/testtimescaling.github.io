@@ -104,6 +104,7 @@ As enthusiasm for scaling computation (data and parameters) in the pertaining er
 | <i><b>ReasonFlux: Hierarchical LLM Reasoning via Scaling Thought Templates</b></i><br>, <a href="https://arxiv.org/abs/2502.06772" target="_blank"><img src="https://img.shields.io/badge/arXiv-2502.06772-red" alt="arXiv Badge"></a></li> | Internal,<br>Sequential | ✗ | PPO,<br>Trajectory | Thought Template Retrieve | ✗ | ✗ | Math | Pass@1 |
 | <i><b>L1: Controlling how long a reasoning model thinks with reinforcement learning</b></i><br>, <a href="https://arxiv.org/abs/2503.04697" target="_blank"><img src="https://img.shields.io/badge/arXiv-2503.04697-red" alt="arXiv Badge"></a></li> | Internal | ✗ | GRPO,<br>Length-Penalty | ✗ | ✗ | ✗ | ✗ | Math | Pass@1,<br>Length Error |
 | <i><b>Marco-o1: Towards Open Reasoning Models for Open-Ended Solutions</b></i><br>, <a href="https://arxiv.org/abs/2411.14405" target="_blank"><img src="https://img.shields.io/badge/arXiv-2411.14405-red" alt="arXiv Badge"></a></li> | Internal,<br>Hybrid | distillation,<br>imitation | ✗ | Reflection Prompt | MCTS | Self-Critic | ✗ | Math | Pass@1,<br>Pass@k |
+| <i><b>Don't Pass@k: A Bayesian Framework for Large Language Model Evaluation</b></i><br>, <a href="https://arxiv.org/abs/2510.04265" target="_blank"><img src="https://img.shields.io/badge/arXiv-2510.04265-red" alt="arXiv Badge"></a> | N/A | N/A | N/A | N/A | N/A | N/A | N/A | Math | Bayes@N posterior mean,<br>Credible intervals,<br>Sampling budget |
 
 
 
